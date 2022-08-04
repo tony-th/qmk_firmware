@@ -112,7 +112,12 @@
 #define ENABLE_RGB_MATRIX_MULTISPLASH
 #define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
-// #define RGB_MATRIX_KEYPRESSES
+
+#define RGB_MATRIX_KEYPRESSES // reacts to keypresses
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS // enable framebuffer effects
+#define RGB_MATRIX_LED_PROCESS_LIMIT (DRIVER_LED_TOTAL + 4) / 5 // limits the number of LEDs to process in an animation per task run (increases keyboard responsiveness)
+#define RGB_MATRIX_LED_FLUSH_LIMIT 16 // limits in milliseconds how frequently an animation will update the LEDs. 16 (16ms) is equivalent to limiting to 60fps (increases keyboard responsiveness)
+#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200 // limits maximum brightness of LEDs to 200 out of 255. If not defined maximum brightness is set to 255
 
 /* Enable receive custom command from host */
 #define RAW_HID_CMD 0xAB
